@@ -1,0 +1,556 @@
+	﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Department of Agricultural Marketing: Manage Event</title>
+	<meta name="keywords" content="" />
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="" />
+	<link rel="stylesheet" type="text/css" href="/global/css/bangla/kalpurush.css" />
+	<style>
+       td{
+       padding:0;
+       margin:0;
+       font-family: kalpurushregular!important;
+       font-size: 20px;
+       }
+  </style>
+
+	<!-- global declaration -->
+
+<link rel="stylesheet" type="text/css" href="/global/calendar/fullcalendar.css"/>
+<link rel="stylesheet" type="text/css" href="/global/calendar/fullcalendar.print.css"  media='print'/>
+<link rel="stylesheet" media="screen" type="text/css" href="/global/css/styles.css" />
+
+<script type="text/javascript" src="/global/calendar/moment.min.js"></script>
+<script type="text/javascript" src="/global/js/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="/global/calendar/fullcalendar.min.js"></script>
+
+<script type="text/javascript" src="/global/js/functions.js?v=2.1"></script>
+<script type="text/javascript" src="/global/parsley/parsley.min.js"></script> <!--JQuery form validation-->
+
+
+<!--Canvas JS-->
+<script type="text/javascript" src="/global/canvasjs/canvasjs.min.js"></script>
+
+<!--JQuery UI-->
+<link rel="stylesheet" type="text/css" href="/global/jquery_ui/jquery-ui.min.css" />
+<script type="text/javascript" src="/global/jquery_ui/jquery-ui.min.js"></script>
+
+<!--bootstrap-->
+<link rel="stylesheet" type="text/css" href="/global/bootstrap_3_2/css/bootstrap.min.css" />
+<script type="text/javascript" src="/global/bootstrap_3_2/js/bootstrap.min.js"></script>
+
+<!--date time picker-->
+<link rel="stylesheet" type="text/css" href="/global/js/jquery.datetimepicker.css" />
+
+<!--date picker-->
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.3/datepicker.css"/>
+
+
+<!--for slider and full slider and vTicker external style-->
+<link rel="stylesheet" type="text/css" href="/global/owl/owl-carousel/full-slider.css" />
+<link rel="stylesheet" type="text/css" href="/global/owl/owl-carousel/owl.carousel.css" />
+<link rel="stylesheet" type="text/css" href="/global/owl/owl-carousel/owl.theme.css" />
+<link rel="stylesheet" type="text/css" href="/global/owl/owl-carousel/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" href="/global/owl/owl-carousel/style.css" />
+<script  type="text/javascript" src="/global/owl/owl-carousel/owl.carousel.min.js"></script>
+
+<!--for news marquee-->
+<link rel="stylesheet" type="text/css" href="/damweb/css/bamis/newmarquee.css" />
+<script type="text/javascript" src="/damweb/js/bamis/newmarquee.js"></script>
+
+<script type="text/javascript" src="/global/js/jquery.datetimepicker.js"></script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.3/datepicker.js"></script>
+
+<!--JQuery multi-select checkbox-->
+<link rel="stylesheet" type="text/css" href="/global/multi_select_checkbox/jquery.multiselect.css" />
+<script type="text/javascript" src="/global/multi_select_checkbox/jquery.multiselect.min.js"></script>
+
+<!--[if lt IE 9]>
+	<link rel="stylesheet" media="screen" type="text/css" href="/global/css/styles_ie.css" />
+  <script src="/global/js/html5shiv.min.js"></script>
+  <script src="/global/js/respond.min.js"></script>
+<![endif]-->
+<title>কৃষি বিপণন অধিদপ্তর: দৈনিক বাজারদর অনলাইন</title>
+<link  type="image/x-icon" rel="Shortcut Icon" href="http://market.dam.gov.bd/global/img/favicon.png" />
+<link rel="image_src" href="http://market.dam.gov.bd/global/img/logo.png" />
+<meta property="og:image" content="http://market.dam.gov.bd/global/img/logo.png" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-THWD3M49RW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-THWD3M49RW');
+</script>
+
+<link rel="icon" href="/global/img/favicon.ico" type="image/x-icon"/>			<!-- print plugin -->
+	<script src="/global/js/jquery.jqprint.js"></script>
+	<link rel="stylesheet" type="text/css" href="/global/chosen/chosen.css" />
+	<script type="text/javascript" src="/global/chosen/chosen.jquery.js"></script>
+  <script type="text/javascript">
+        $(document).ready(function(){
+            $('#print_icon').click(function(){
+                $('#printArea').jqprint();
+            });
+        });
+  </script>
+</head>
+
+<body>
+	<div id="wrapper">
+		<div id="header_container">    <style>
+       @import url(/damweb/css/bangla/kalpurush.css);
+       
+			/*bootstrap ovverride - menu click option hide*/
+			.open > .dropdown-menu {
+				display:none;
+			}
+
+       #bfooter {
+         position:fixed;
+         bottom:0;
+         width:100%;
+         height: 40px;   /* Height of the footer  50 with ticker*/
+         background:#505a00;
+       }
+       
+       ::-webkit-scrollbar{
+       	width: 7px;
+       }
+       
+       ::-webkit-scrollbar-track {
+         -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+         border-radius: 10px;
+       }
+       ::-webkit-scrollbar-thumb {
+         border-radius: 10px;
+         -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+       }
+				
+       .demo3 {
+         font-family: Arial, sans-serif;
+         border: 1px solid #C20;
+         margin-top: 10px;
+         margin-right-value: 0px;
+         margin-bottom: 10px;
+         margin-left-value: 0px;
+         margin-left-ltr-source: physical;
+         margin-left-rtl-source: physical;
+         margin-right-ltr-source: physical;
+         margin-right-rtl-source: physical;
+         font-style: italic;
+         position: relative;
+         padding: 0 0 0 82px;
+         box-shadow: 0 2px 5px -3px #000;
+         border-radius: 3px;
+       }
+       .demo3:before {
+         content: "Achievements:";
+         display: inline-block;
+         font-style: normal;
+         background: #C20;
+         padding: 10px;
+         color: #FFF;
+         font-weight: bold;
+         position: absolute;
+         top: 0;
+         left: 0;
+       }
+       .demo3:after {
+         content: '';
+         display: block;
+         top: 0;
+         left: 80px;
+         background: linear-gradient(#FFF, rgba(255, 255, 255, 0));
+         height: 20px;
+       }
+       .demo3 ul li {
+         list-style: none;
+         padding: 10px 0;
+       }
+       .et-run{
+         background-color: #0cf;
+         color: white;
+         border: 1px solid black;
+       }
+       .submenu{
+         left: 100%;
+         top: -8px;
+       }
+       
+			 #doc {display:none;} 
+			 #navbar ul li a{font-weight:bold; color:#ffffff;border-right:2px solid #ffffff;}
+			 #navbar ul li ul li a{font-weight:normal}
+			 .governance, .itcell{
+			 		color:#ffffff;
+			 		font-size:26px;
+			 }
+			 
+			i{font-family: FontAwesome  !important; font-style: normal; font-size: 40px; color:#3071A9}
+			
+			.bootstrap-select .glyphicon { font-family: Glyphicons Halflings !important;
+			
+    </style>
+      <script> setTimeout(function(){$("#doc").show();}, 1500); </script>
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+      <div id="bcontainer" style="width:100%">
+      <div id="bbody">
+      	<div class="first_part container">
+				<ul class="pull-right" style="height:18px">
+					 
+      		      <li class="float_left"><em>Need Help? Call Us +88 02 9114093</em></li>
+	      <li class="float_left">&nbsp;|&nbsp;</li>
+	      <li class="float_left"><a title="Twitter" target="_blank" href="https://twitter.com/agri_ministry/"> <i class="fa fa-twitter-square"></i> </a></li>
+	      <li class="float_left">&nbsp;|&nbsp;</li>
+        <li class="float_left"><a title="Facebook" target="_blank" href="https://www.facebook.com/damgov/"> <i class="fa fa-facebook-square"></i></a></li>
+       	      <li class="float_left">&nbsp;|&nbsp;</li>
+	     <li class="float_left"><a href="http://market.dam.gov.bd/market_daily_price_report?L=B" ><b>বাংলা</b></a> </li>   
+		   	      <div class="float_clear_full">&nbsp;</div>
+		    </ul>
+		    <div class="float_clear_full">&nbsp;</div>
+		   </div>
+         <section id="top_slider" class="con" style="position:relative; width:100%; height:150px; overflow:hidden;">
+         <img data-id="1" style="width:100%; position:absolute; left:0px; top:0px;" src="/global/img/main_banner/main_slider1.jpg" />
+         <img data-id="2" style="width:100%; position:absolute; left:0px; top:0px; opacity:0;" src="/global/img/main_banner/main_slider2.jpg" />
+         <img data-id="3" style="width:100%; position:absolute; left:0px; top:0px; opacity:0;" src="/global/img/main_banner/main_slider3.jpg" />
+         <img data-id="4" style="width:100%; position:absolute; left:0px; top:0px; opacity:0;" src="/global/img/main_banner/main_slider4.jpg" />
+         <img data-id="5" style="width:100%; position:absolute; left:0px; top:0px; opacity:0;" src="/global/img/main_banner/main_slider5.jpg" />
+         <img data-id="6" style="width:100%; position:absolute; left:0px; top:0px; opacity:0;" src="/global/img/main_banner/main_slider6.jpg" />
+         <img data-id="7" style="width:100%; position:absolute; left:0px; top:0px; opacity:0;" src="/global/img/main_banner/main_slider7.jpg" />
+         <img data-id="8" style="width:100%; position:absolute; left:0px; top:0px; opacity:0;" src="/global/img/main_banner/main_slider8.jpg" />
+         <img data-id="9" style="width:100%; position:absolute; left:0px; top:0px; opacity:0;" src="/global/img/main_banner/main_slider9.jpg" />
+         
+         <div style="z-index:101; position:absolute;left:50px; top:10%;">
+         <div><img  width="80" height="80" src="/global/img/new_logo_dam.png" style="float:left;" /></div><div><img width="auto" height="70" style="float:right;margin-top:-75px;margin-left:100px;" src="/global/img/header2_text.png" alt="Department of Agriculture Marketing" /></div>         </div>
+      </section>
+
+
+            <nav class="navbar custom-navbar" style="margin-bottom:0px;font-size:12px !important;">
+         <div class="container-fluid">
+            <div class="container-fluid">
+               <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  </button>
+               </div>
+               <div  id="navbar" class="navbar-collapse collapse">
+                  <ul class="nav navbar-nav">
+                     <li><a href="/">Home</a></li>
+                     <li class="dropdown">
+                        <a class="dropdown-toggle"  href="#">About Us<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                           <li class="dropdown">
+                              <a class="dropdown-toggle" href="/damweb/PublicPortal/index.php?mnuAboutUs">About DAM <i class="fa fa-caret-right"></i></a>
+                              <ul class="dropdown-menu submenu">
+                                 <li><a href="/damweb/PublicPortal/index.php?mnuHistory();">Brief History</a></li>
+                                 <li><a href="http://dam.portal.gov.bd/site/organogram/781394a8-2d3c-4dad-80b5-dda218533db3/Organogram-">Organizational Setup</a></li>
+                                 <li><a href="/damweb/PublicPortal/index.php?mnuMission();">Mission</a></li>
+                                 <li><a href="/damweb/PublicPortal/index.php?mnuVision();">Vision</a></li>
+                                 <li><a href="/damweb/PublicPortal/index.php?mnuActivities();">Activities</a></li>
+                                 <li><a href="/damweb/PublicPortal/index.php?mnuAchievements();">Achievements</a></li>
+                                 <li><a href="/damweb/PublicPortal/index.php?mnuFutureWorkPlan();">Future Work Plan</a></li>
+                                 <li><a href="/damweb/PublicPortal/index.php?mnuContactInformation();">Contact Information</a></li>
+                              </ul>
+                           </li>
+                           <li class="dropdown">
+                              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Publications <i class="fa fa-caret-right"></i></a>
+                              <ul class="dropdown-menu submenu">
+                                 <li><a href="/view_customize_report_monthly"> Monthly Reports</a></li>
+                                  <li><a href="/view_customize_report">Yearly Reports</a></li>
+                                 <li><a href="/damweb/PublicPortal/index.php?mnuPublicationsReportsResearch();"> Study / Research Reports</a></li>
+                                 <li><a href="/damweb/PublicPortal/index.php?mnuPublicationsBulletins();">Bulletins</a></li>
+                                 <li><a href="/damweb/PublicPortal/index.php?mnuPublicationsArchive();">Archive</a></li>
+                              </ul>
+                           </li>
+                           <li class="dropdown">
+                              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Projects and Programs <i class="fa fa-caret-right"></i></a>
+                              <ul class="dropdown-menu submenu">
+                                 <li><a href="/damweb/PublicPortal/index.php?mnuProjectOnGoing();">On Going Projects</a></li>
+                                 <li><a href="/damweb/PublicPortal/index.php?mnuProjectCompleted();">Completed Projects</a></li>
+                                 <li><a href="/damweb/PublicPortal/index.php?mnuProjectUpComing();">Up-Comming Projects</a></li>
+                                 <li><a href="/damweb/PublicPortal/index.php?mnuProgramOnGoing();">On Going Programs</a></li>
+                                 <li><a href="/damweb/PublicPortal/index.php?mnuProgramCompleted();">Completed Programs</a></li>
+                                 <li><a href="/damweb/PublicPortal/index.php?mnuProgramUpComing();">Up-Coming Programs</a></li>
+                              </ul>
+                           </li>
+                           <li class="dropdown">
+                              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Support and Service <i class="fa fa-caret-right"></i></a>
+                              <ul class="dropdown-menu submenu">
+                                 <li><a href="/damweb/PublicPortal/index.php?mnuSupport();">Support</a></li>
+                                 <li><a href="/damweb/PublicPortal/index.php?mnuOpportunities();">Service</a></li>
+                              </ul>
+                           </li>
+                           <li class="dropdown">
+                              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Events <i class="fa fa-caret-right"> </i> </a>
+                              <ul class="dropdown-menu submenu">
+                                 <li><a href="/damweb/PublicPortal/index.php?mnuSeminars();">Seminar and Workshop</a></li>
+                                 <li><a href="/damweb/PublicPortal/index.php?mnuTrainingCalendar();">Training</a></li>
+                              </ul>
+                           </li>
+												   <li><a href="/damweb/PublicPortal/index.php?mnuGovernmentForms();">Government Forms</a></li>
+												   <li><a href="http://dam.portal.gov.bd/site/page/9c8c6e42-c92d-44cd-91d9-c7871359a999/-Acts-and-Ordinances">Acts, Rules, and Policy</a></li>
+                        </ul>
+                     </li>
+                     <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Market Prices <i class="fa fa-caret-down"></i></a>
+                        <ul class="dropdown-menu" style="position:absolute">
+                           <li><a href="/damweb/PublicPortal/MarketDisplayFullScreen.php" target="_blank">Recent Prices</a></li>
+                       <!--    <li><a href="/damweb/PublicPortal/index.php?mnuTrendPriceReports();">Price Trends</a></li>-->
+                           <li class="dropdown">
+                              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Price Reports <i class="fa fa-caret-right"></i></a>
+                              <ul class="dropdown-menu submenu">
+                                 <li><a href="/commodity_wise_report">Commodity Wise Report</a></li>
+                                  <li><a href="/commodity_wise_weekly_report">Commodity Wise Weekly Report</a></li>
+                                 <li><a href="/comparative_report_weekly">Comparative Report(Weekly,Monthly,Yearly)</a></li>
+                                 <li><a href="/market_daily_price_report">Market Daily Price Report</a></li>
+                                 <li><a href="/retail_price_commodity_report">Retail Price Comparative Report on Essential Commodities</a></li>
+                                 <li><a href="/subdistrict_retail_price_report">Subdistrict  Wise  Retail  Price  Report</a></li>
+                                 <li><a href="/larger_district_retail_price_report">Retail  Price  Report  on  Larger  District  Sadar  Bazar</a></li>
+                             		<li><a href="/price_graphical_report">Graphical Report of Commodity Price</a></li>
+                              </ul>
+                           </li>
+                       	<!--   <li><a href="/damweb/PublicPortal/ViewReport.php?reportname=DailyPricePubDistrictBy.rptdesign" target="_blank">Daily Price Report</a></li>-->
+                           <li><a href="/manage_market_directory">Market Directory</a></li>
+                           <li><a href="/manage_borrower_information">Borrower Information</a></li>
+                        </ul>
+                     </li> 
+                     <li><a href="/blog">Blog</a></li>
+                     <li><a href="/forum">Forum</a></li>
+                     <li><a href="/event">Events</a></li>
+                     <li><a href="/location">Map</a></li>
+                     <li><a href="/classified_home">Classified</a></li> 
+                     <!-- <li><a href="http://dam.portal.gov.bd/" target="_blank"><b>Portal</b></a></li> 
+                     <li><a href="https://www.facebook.com/damgov" target="_blank"><b>Facebook</b></a></li> -->
+                     <li><a href="/create_classified_post"><b>Free Post</b></a></li>
+                      
+                     	<li> <a  href="/signin">Login</a> </li>
+                      
+											<li><a href="http://dam.portal.gov.bd/" target="_blank" style="border-left:5px dotted #FF732B; background-color:#D88790; border-right:5px dotted #FF732B; background-color:#ffffff"> <span class="blink_me" style="color:#000000"><b>Govt. Portal</b></span> </a> </li>
+                  		<!--<li><a href="http://180.211.159.170/damweb/jsp/index.jsp" target="_blank" > <b>Old Website </b></a> </li>-->
+											<li><a href="http://dam.portal.gov.bd/site/view/news" target="_blank" > <b>News</b></a> </li>
+                 		 <li><a href="http://dam.portal.gov.bd/site/view/notices" target="_blank" > <b>Notice</b></a> </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </nav>
+            <style>
+#marqueeborder .stockbox span {
+    font-size: 18px;
+}
+
+#marqueeborder .stockbox {
+    font-size: 18px;
+}
+
+#marqueeborder .stockbox a {
+    font-size: 18px;
+}
+
+.mymarquee {
+    font-family: Arial, sans-serif;
+    margin-top: 0px;
+    margin-right-value: 0px;
+    margin-bottom: 0px;
+    margin-left-value: 0px;
+    margin-left-ltr-source: physical;
+    margin-left-rtl-source: physical;
+    margin-right-ltr-source: physical;
+    margin-right-rtl-source: physical;
+    font-style: italic;
+    
+    position: relative;
+    padding: 0 0 0 0px;
+    #box-shadow: 0 2px 5px -3px #000;
+    border-radius: 0px;
+    background: #C20;
+    top:-1px;
+    height:25px;
+}
+
+.mymarquee:before {
+    content: 'Daily National Avg. Market Price (Retail):';
+    display: inline-block;
+    font-style: normal;
+    background: #C20;
+    padding: 0px;
+    height:25px;
+    color: #FFF;
+    font-weight: bold;
+	   position: absolute;
+   top: 0;
+   left: 2px;
+}
+
+.mymarquee:after {
+    content: '';
+ 		#display: block;
+    top: 0;
+    left: 00px;
+    background: linear-gradient(#FFF, rgba(255, 255, 255, 0));
+    #height: 2px;
+    height:25px;
+    font-size:16px;
+		font-size: 18px;
+		font-weight:bold;
+	
+}
+
+</style>
+ 
+<div class="panel-heading" style= "padding: 0px 0px; width:100%"></div> <!--  Border top of Marquee --> 
+	<div class="mymarquee">
+		<div id="marqueeborder" onmouseover="pxptick=0" onmouseout="pxptick=scrollspeed"  style="height:25px;left:20%; border-color: #000000; width:80%; top:-1px"> 
+		<div id="marqueecontent" style="font-size: 16px; width:7150px;">  <!--  Marquee content start -->
+			<span class="stockbox"><a href="#Aman-Fine">Aman-Fine</a>:&nbsp; 72.00 - 75.00 <span style="color: #FF0000;">&#x25B2;0.00% </span></span><span class="stockbox"><a href="#Aman-Medium">Aman-Medium</a>:&nbsp; 56.00 - 60.00 <span style="color: #FF0000;">&#x25B2;0.00% </span></span><span class="stockbox"><a href="#Aman-Coarse">Aman-Coarse</a>:&nbsp; 48.00 - 50.00 <span style="color: #FF0000;">&#x25B2;0.00% </span></span><span class="stockbox"><a href="#Boro-Fine">Boro-Fine</a>:&nbsp; 66.00 - 70.00 <span style="color: #FF0000;">&#x25B2;0.00% </span></span><span class="stockbox"><a href="#Boro-Medium">Boro-Medium</a>:&nbsp; 55.00 - 57.00 <span style="color: #FF0000;">&#x25B2;0.00% </span></span><span class="stockbox"><a href="#Boro-Coarse">Boro-Coarse</a>:&nbsp; 47.00 - 49.00 <span style="color: #FF0000;">&#x25B2;0.00% </span></span><span class="stockbox"><a href="#Ata (packet)">Ata (packet)</a>:&nbsp; 58.00 - 61.00 <span style="color: #FF0000;">&#x25B2;0.00% </span></span><span class="stockbox"><a href="#Farm-raised Hen">Farm-raised Hen</a>:&nbsp; 162.00 - 167.00 <span style="color: #FF0000;">&#x25B2;0.00% </span></span><span class="stockbox"><a href="#Beef">Beef</a>:&nbsp; 729.00 - 750.00 <span style="color: #FF0000;">&#x25B2;0.00% </span></span><span class="stockbox"><a href="#Egg Farm-Red">Egg Farm-Red</a>:&nbsp; 47.00 - 48.00 <span style="color: #FF0000;">&#x25B2;0.00% </span></span><span class="stockbox"><a href="#Sugar (Local)">Sugar (Local)</a>:&nbsp; 132.00 - 135.00 <span style="color: #FF0000;">&#x25B2;0.00% </span></span><span class="stockbox"><a href="#Iodized Salt (Packed)">Iodized Salt (Packed)</a>:&nbsp; 32.00 - 40.00 <span style="color: #FF0000;">&#x25B2;0.00% </span></span><span class="stockbox"><a href="#Mung">Mung</a>:&nbsp; 122.00 - 128.00 <span style="color: #FF0000;">&#x25B2;0.00% </span></span><span class="stockbox"><a href="#Gram-Whole">Gram-Whole</a>:&nbsp; 85.00 - 90.00 <span style="color: #FF0000;">&#x25B2;0.00% </span></span><span class="stockbox"><a href="#Soybean">Soybean</a>:&nbsp; 163.00 - 165.00 <span style="color: #FF0000;">&#x25B2;0.00% </span></span><span class="stockbox"><a href="#Onion-local">Onion-local</a>:&nbsp; 60.00 - 64.00 <span style="color: #FF0000;">&#x25B2;0.00% </span></span><span class="stockbox"><a href="#Garlic-local">Garlic-local</a>:&nbsp; 173.00 - 186.00 <span style="color: #FF0000;">&#x25B2;0.00% </span></span><span class="stockbox"><a href="#Garlic-Imported">Garlic-Imported</a>:&nbsp; 192.00 - 204.00 <span style="color: #FF0000;">&#x25B2;0.00% </span></span><span class="stockbox"><a href="#Green Chili">Green Chili</a>:&nbsp; 218.00 - 237.00 <span style="color: #FF0000;">&#x25B2;0.00% </span></span><span class="stockbox"><a href="#Ginger-local">Ginger-local</a>:&nbsp; 154.00 - 174.00 <span style="color: #FF0000;">&#x25B2;0.00% </span></span><span class="stockbox"><a href="#Ginger-Imported">Ginger-Imported</a>:&nbsp; 167.00 - 186.00 <span style="color: #FF0000;">&#x25B2;0.00% </span></span><span class="stockbox"><a href="#Mutton">Mutton</a>:&nbsp; 900.00 - 1100.00 <span style="color: #FF0000;">&#x25B2;0.00% </span></span>		</div> <!--  Marquee content end -->
+	</div> 
+</div>      <!-- message board -->
+      			
+			<script type="text/javascript">
+				$(document).ready(function(){
+					var top_slider_position = 1;
+					var top_slider_pre = "#top_slider img[data-id='1']";
+					var top_slider = setInterval(function(){
+						top_slider_position++;
+						if( top_slider_position > 9 ){
+							top_slider_position = 1;
+						}
+						
+						var top_slider_image = "#top_slider img[data-id='" + top_slider_position + "']";
+						
+						$(top_slider_image).animate({opacity:1}, 700);
+						$(top_slider_pre).animate({opacity:0}, 700);
+						
+						top_slider_pre = top_slider_image;
+						
+						
+					}, 10000);
+				});
+			</script>
+</div>
+		<div id="page_daily_price_list_report" class="page_identifier container">
+			<div id="main_body">
+								<h3 class="fsecond">Daily Price List Report</h3>
+				
+				<div class="row">
+					<div class="col-sm-9">
+						<form id="frm_filter" method="post" action="" data-parsley-validate>
+							<input type="hidden" id="token" name="csrf_webspice_tkn" value="3a77216b2da4e02a6477cb2641a5d7ef">
+							
+							<div class="row">
+								<div class="col-sm-3">
+									<div class="input_label">Division</div>
+									<select id="drp_division_eng" name="Division_id[]" child="district"  class="selectpicker" data-actions-box="true" multiple>
+									</select>
+								</div>
+								<div class="col-sm-3">
+									<div class="input_label">District</div>
+									<select id="drp_district_eng" name="district_id[]" child="subdistrict"  class="selectpicker" data-actions-box="true" multiple>
+									</select>
+								</div>
+								<div class="col-sm-3">
+									<div class="input_label">Upazila</div>
+									<select id="drp_subdistrict_eng" name="sub_district_id[]" child="market" class="selectpicker" data-actions-box="true" multiple>
+									</select>
+								</div>
+								<div class="col-sm-3">
+									<div class="input_label">Market*</div>
+									<select id="drp_market_eng" name="market_id[]" class="selectpicker" data-actions-box="true" multiple required>
+									</select>
+								</div>
+								<div class="col-sm-3">
+									<div class="input_label">Price Type*</div>
+									<select class="selectpicker" name="PriceType_id[]" id="PriceType_id" multiple required>
+				              					              		<option value="5">Wholesale</option>
+				              					              		<option value="4">Retail</option>
+				              					          </select>
+								</div>
+								<div class="col-sm-3">
+									<div class="input_label">Date*</div>
+										<input type="text" class="date_picker form-control" id="date" name="date" required/>
+								</div>
+							</div>
+				<br/><br/>
+									<input type="submit" name="filter" class="btn btn-danger" value="Generate Report" />
+									<a class="btn btn-default" href="/market_daily_price_report/print" target="_blank" id="print_icon" type="button">Print Data</a>
+									<a class="btn btn-primary" href="/market_daily_price_report/pdf" type="button">PDF</a>	
+									<!--<a class="btn btn-default" href="/market_daily_price_report/pdf" type="button">PDF</a>--->
+						</form>
+					</div>
+					<div class="col-sm-3">
+						<h4>If You want to Download PDF, Please check the following browser settings:</h4>
+							<h5>Google Crome:-</h5>
+							1. Click the top right button for setting.
+							2. After clicking settings then click Advance
+							3. Go to content setting
+							4. Find out Pop-up and redirects
+							5. Click first option to allow.
+							<hr/>
+							<h5>Mozilla Firefox:-</h5>
+							1. Click the top right button for setting.
+							2. Go to options
+							3. From the Content, Tick off from Pop ups
+					</div>
+				</div>
+		
+				<br />
+				
+				<div id="printArea">
+														</div>
+			</div>
+			</div>
+		</div>
+		
+		<div id="footer_container"><nav class="navbar custom-navbar" style="margin-bottom:0px">
+    <div class="container-fluid">
+        <div class="container">
+                <ul class="nav navbar-nav custom_border">
+                    <li><a href="/"><b>HOME</b></a></li>
+                    <li><a href="/blog"><b>BLOG</b></a></li> 
+                    <li><a href="/classified_home"><b>SHOP</b></a></li> 
+                    <li><a href="/contact"><b>CONTACTS</b></a></li>
+                		<li><a href="/dam_user_guide/visitor_guide.html" target="_blank"><b>VISITOR GUIDE</b></a></li>
+                	<!--	<li><a href="/dam_user_guide/index.html" target="_blank"><b>USER GUIDE</b></a></li>-->
+                		</ul>
+                
+                <ul class="nav navbar-nav navbar-right">
+                    <li><p style="color:#fff; margin-top:15px;font-size:13px;">Copyright &copy; 2016,Department of Agricultural Marketing | Visitor : Today-0, Total-9440840 </p></li>
+                </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+</div>
+		<script type="text/javascript">
+		$(".chosen-select").chosen(); 
+		</script>
+	</div>
+</body>
+<!--bootstrap-->
+<link rel="stylesheet" type="text/css" href="/global/bootstrap_3_2/css/bootstrap.min.css" />
+  
+<!---bootstrap select--->
+<link rel="stylesheet" type="text/css" href="/global/bootstrap-select/css/bootstrap-select.css" />
+<script type="text/javascript" src="/global/bootstrap-select/js/bootstrap-select.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+     $('.selectpicker').selectpicker();
+  });
+</script>
+</html>
+
+
