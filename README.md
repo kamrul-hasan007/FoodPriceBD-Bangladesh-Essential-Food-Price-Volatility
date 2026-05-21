@@ -68,6 +68,10 @@ The project dataset contains more than 10,000 observations. It covers:
 
 The objective of this project is to apply data science techniques to analyze essential food price volatility in Bangladesh and build predictive models that can help understand future price behavior. This type of analysis can support market monitoring, food security research, and data-driven decision-making.
 
+## 📄 License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
 ### Author
 
 Md. Kamrul Hasan
